@@ -6,6 +6,10 @@ import { ConductorModule } from './conductor/conductor.module';
 import { VehiculoModule } from './vehiculo/vehiculo.module';
 import { ViajeModule } from './viaje/viaje.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UsuarioViajeModule } from './usuario-viaje/usuario-viaje.module';
+import { ConductorViajeModule } from './conductor-viaje/conductor-viaje.module';
+import { ConductorVehiculoModule } from './conductor-vehiculo/conductor-vehiculo.module';
+import { VehiculoViajeModule } from './vehiculo-viaje/vehiculo-viaje.module';
 
 @Module({
   imports: [UsuarioModule, ConductorModule, VehiculoModule, ViajeModule,
@@ -21,6 +25,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true,
       keepConnectionAlive: true
     }),
+    UsuarioViajeModule,
+    ConductorViajeModule,
+    ConductorVehiculoModule,
+    VehiculoViajeModule,
   ],
   controllers: [AppController],
   providers: [AppService],
