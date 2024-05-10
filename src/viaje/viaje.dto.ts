@@ -1,33 +1,32 @@
 import {IsNotEmpty, IsString, IsNumber} from 'class-validator';
 
-
 export class ViajeDto {
 
     @IsString()
     @IsNotEmpty()
-    dirOrigen: string;
+    readonly dirOrigen: string;
     
     @IsString()
     @IsNotEmpty()
-    dirDestino: string;
+    readonly dirDestino: string;
 
     @IsString()
     @IsNotEmpty()
-    fecha: string;
+    readonly fecha: string;
 
     @IsString()
     @IsNotEmpty()
-    horaInicio: string;
+    readonly horaInicio: string;
 
     @IsString()
     @IsNotEmpty()
-    horaFin: string;
+    readonly horaFin: string;
 
     @IsNumber()
     @IsNotEmpty()
-    valor: string;
+    readonly valor: string;
 
     @IsNumber()
     @IsNotEmpty()
-    metodoPago: string;
+    readonly metodoPago: string;
 }
