@@ -46,7 +46,7 @@ export class ConductorVehiculoService {
         return conductorVehiculo;
     }
      
-    async findVehiculoByconductorId(conductorId: string): Promise<VehiculoEntity[]> {
+    async findVehiculosByconductorId(conductorId: string): Promise<VehiculoEntity[]> {
         const conductor: ConductorEntity = await this.conductorRepository.findOne({where: {id: conductorId}, relations: ["vehiculos"]});
         if (!conductor)
           throw new BusinessLogicException("The driver with the given id was not found", BusinessError.NOT_FOUND)
