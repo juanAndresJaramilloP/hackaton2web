@@ -1,0 +1,549 @@
+{
+	"info": {
+		"_postman_id": "821e5c71-e7c0-444e-ac85-1c6396bfc6b6",
+		"name": "Hackaton 2 API",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Tests\" tab**\n\nTests help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/b5f280a7-4b09-48ec-857f-0a7ed99d7ef8/U2NyZWVuc2hvdCAyMDIzLTAzLTI3IGF0IDkuNDcuMjggUE0ucG5n\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) in \"Tests\" to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25530529"
+	},
+	"item": [
+		{
+			"name": "conductores",
+			"item": [
+				{
+					"name": "add a driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombreUsuario\":\"Juan\",\n    \"contrasena\": \"dfwer5t\",\n    \"nombreCompleto\": \"Juan Andres Jaramillo\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"fotoLicenciaFrontal\": \"https://example.com\",\n    \"fotoLicenciaTrasera\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\"\n\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/conductores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"conductores"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add driver example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombreUsuario\":\"Juan\",\n    \"contrasena\": \"dfwer5t\",\n    \"nombreCompleto\": \"Juan Andres Jaramillo\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"fotoLicenciaFrontal\": \"https://example.com\",\n    \"fotoLicenciaTrasera\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\"\n\n\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/conductores",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"conductores"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "330"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14a-KnTSMBuwuYPR6SW+1D9f9/oHFHA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 04:38:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombreUsuario\": \"Juan\",\n    \"contrasena\": \"dfwer5t\",\n    \"nombreCompleto\": \"Juan Andres Jaramillo\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"fotoLicenciaFrontal\": \"https://example.com\",\n    \"fotoLicenciaTrasera\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\",\n    \"id\": \"c0e6447e-e3da-4e33-b26e-a579a5c314ce\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "conductor-vehiculo",
+			"item": [
+				{
+					"name": "addVehiculoConductor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/conductores/{{driver_id}}/vehiculos/{{vehicle_id}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"conductores",
+								"{{driver_id}}",
+								"vehiculos",
+								"{{vehicle_id}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "addVehiculoConductor",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/v1/conductores/{{driver_id}}/vehiculos/{{vehicle_id}}",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"conductores",
+										"{{driver_id}}",
+										"vehiculos",
+										"{{vehicle_id}}"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "530"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"212-I/ZDwqL/iQcaaxcPtJ4jLsUna8o\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 04:56:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"c0e6447e-e3da-4e33-b26e-a579a5c314ce\",\n    \"nombreUsuario\": \"Juan\",\n    \"contrasena\": \"dfwer5t\",\n    \"nombreCompleto\": \"Juan Andres Jaramillo\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"fotoLicenciaFrontal\": \"https://example.com\",\n    \"fotoLicenciaTrasera\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\",\n    \"viajes\": [],\n    \"vehiculos\": [\n        {\n            \"id\": \"ea16a89c-8b35-4bea-9c3a-df0cb4b051ae\",\n            \"placa\": \"usd623\",\n            \"marca\": \"ford\",\n            \"modelo\": \"2009\",\n            \"color\": \"azul\",\n            \"fotoVehiculo\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "conductor-viaje",
+			"item": []
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nombreUsuario\":\"Juan\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"contrasena\": \"dfwer5t\",\n    \"numTarjeta\": \"5245-4632-5149-3551\",\n    \"codSeguridad\": \"567\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add user example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nombreUsuario\":\"Juan\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"contrasena\": \"dfwer5t\",\n    \"numTarjeta\": \"5245-4632-5149-3551\",\n    \"codSeguridad\": \"567\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/usuarios",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "229"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e5-FUexo49yn48AP50mw5zoMtnSOuo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 04:45:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"nombreUsuario\": \"Juan\",\n    \"identificacion\": \"123125434\",\n    \"telefono\": \"3102576345\",\n    \"correo\": \"a@uniandes.edu.co\",\n    \"contrasena\": \"dfwer5t\",\n    \"numTarjeta\": \"5245-4632-5149-3551\",\n    \"codSeguridad\": \"567\",\n    \"id\": \"ea15d0a6-5d86-4b18-a34b-80c3582634dd\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "usuario-viaje",
+			"item": []
+		},
+		{
+			"name": "vehiculo",
+			"item": [
+				{
+					"name": "add vehicle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"placa\": \"usd623\",\n    \"marca\": \"ford\",\n    \"modelo\": \"2009\",\n    \"color\": \"azul\",\n    \"fotoVehiculo\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\"\n\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/vehiculos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"vehiculos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add a vehicle example",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"placa\": \"usd623\",\n    \"marca\": \"ford\",\n    \"modelo\": \"2009\",\n    \"color\": \"azul\",\n    \"fotoVehiculo\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\"\n\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/vehiculos",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"vehiculos"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "173"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ad-7gJ4s6HOQWeS63oo6DYu4VlLwgc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 04:47:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"placa\": \"usd623\",\n    \"marca\": \"ford\",\n    \"modelo\": \"2009\",\n    \"color\": \"azul\",\n    \"fotoVehiculo\": \"http://dummyimage.com/134x100.png/cc0000/ffffff\",\n    \"id\": \"ea16a89c-8b35-4bea-9c3a-df0cb4b051ae\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "vehiculo-viaje",
+			"item": []
+		},
+		{
+			"name": "viaje",
+			"item": [
+				{
+					"name": "add a journey",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dirOrigen\": \"frgdsg\",\n    \"dirDestino\": \"fsdfgsfg\",\n    \"fecha\": \"2024-05-05\",\n    \"horaInicio\": \"11:55 a.m.\",\n    \"horaFin\": \"12:15 p.m.\",\n    \"valor\": 20000,\n    \"metodoPago\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/v1/viajes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"viajes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "add a journey",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"dirOrigen\": \"frgdsg\",\n    \"dirDestino\": \"fsdfgsfg\",\n    \"fecha\": \"2024-05-05\",\n    \"horaInicio\": \"11:55 a.m.\",\n    \"horaFin\": \"12:15 p.m.\",\n    \"valor\": 20000,\n    \"metodoPago\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/v1/viajes",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"viajes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-Wkthb3phCdhB/lpZVNbk+rhWyXc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 10 May 2024 04:50:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"dirOrigen\": \"frgdsg\",\n    \"dirDestino\": \"fsdfgsfg\",\n    \"fecha\": \"2024-05-05\",\n    \"horaInicio\": \"11:55 a.m.\",\n    \"horaFin\": \"12:15 p.m.\",\n    \"valor\": 20000,\n    \"metodoPago\": 1,\n    \"id\": \"bd4db0df-555d-4a66-85f2-de09340057e0\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		},
+		{
+			"key": "driver_id",
+			"value": "c0e6447e-e3da-4e33-b26e-a579a5c314ce"
+		},
+		{
+			"key": "vehicle_id",
+			"value": "ea16a89c-8b35-4bea-9c3a-df0cb4b051ae"
+		}
+	]
+}
